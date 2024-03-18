@@ -1,3 +1,14 @@
+document.getElementById('playButton').addEventListener('click', function() {
+    const canvas = document.getElementById('gameCanvas');
+    canvas.style.display = 'block';
+
+    // Ocultar el botón después de hacer clic en él
+    this.style.display = 'none';
+});
+
+const restartButton = document.getElementById('restartButton');
+restartButton.addEventListener('click', restartGame);
+
 const canvas = document.querySelector('canvas');
         const ctx = canvas.getContext('2d');
         const sprite = document.querySelector('#sprite');
@@ -255,6 +266,16 @@ const canvas = document.querySelector('canvas');
             }
         }
 
+
+        function restartGame() {
+            // Reiniciar el juego
+            lives = 3; // Reiniciar vidas
+            gameActive = true; // Reiniciar el estado del juego
+            restartButton.style.display = 'none'; // Ocultar el botón "Volver a Jugar"
+            canvas.style.display = 'block';
+            draw(); // Volver a iniciar el ciclo de juego
+        }
+
         function draw() {
             cleanCanvas();
 
@@ -275,6 +296,8 @@ const canvas = document.querySelector('canvas');
                 ctx.fillStyle = "#ffffff";
                 ctx.textAlign = "center";
                 ctx.fillText("Game Over", canvas.width / 2, canvas.height / 2);
+                canvas.style.display = 'none';
+                restartButton.style.display = 'block';
             }
 
         }

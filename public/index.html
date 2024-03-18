@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArkanoidJS</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>  
+    <aside>
+        <!-- Barra lateral con controles de juego -->
+        <h1 class="controls">Controles</h1>
+        <div class="icons">
+            <i class="bi bi-arrow-left-square-fill"></i>
+            <i class="bi bi-arrow-right-square-fill"></i>
+        </div>
+        <img src="spacebar.png" alt="" srcset="">
+    </aside>
+
+    <button class="botonPlay" id="playButton"><i class="bi bi-play-fill"></i></button>
+    <button class="botonRestart" id="restartButton" style="display: none;"><i class="bi bi-arrow-clockwise"></i></button>
+    <canvas id="gameCanvas" style="display: none;"></canvas>
+    <img hidden id="sprite" src="assets.png" alt=""/>
+    <img hidden id="spritebricks" src="bricks2.png" alt=""/>
+    <img hidden id="lifeSprite" src="heartsprite.png" alt=""/>
+    <script src="app.js">     
+    </script>
+
+<div class="footer">
+    <ul class="lista">
+        <li class="item"><a href="https://github.com/AGJimenez/"><i class="bi bi-github"></i>Github</a></li>
+        <li class="item"><a href="https://www.linkedin.com/in/alejandrogamezdev/"><i class="bi bi-linkedin"></i>Linkedin</a></li>
+        <li class="item"><a href="https://portfolio-alejandrogamez.web.app/"><i class="bi bi-kanban-fill"></i>Portfolio</a></li>
+        
+    </ul>
+    
+        <p>Made with ❤️ by Alejandro Gámez</p>
+</div>
+
+</body>
+</html>
